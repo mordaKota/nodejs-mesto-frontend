@@ -12,7 +12,7 @@ module.exports = {
             ref: DEPLOY_REF,
             repo: 'git@github.com:mordaKota/nodejs-mesto-frontend.git',
             path: DEPLOY_PATH,
-            'post-deploy': `npm install && npm build && ln -nfs ${DEPLOY_PATH}/source ${DEPLOY_PATH}/current`,
+            'post-deploy': `npm install && npm run build && ln -nfs ${DEPLOY_PATH}/source ${DEPLOY_PATH}/current`,
             env: {
                 NODE_ENV: 'production',
             },
